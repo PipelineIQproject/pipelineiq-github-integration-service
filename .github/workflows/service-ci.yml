@@ -1,0 +1,23 @@
+name: Service CI/CD
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+  workflow_dispatch:
+
+jobs:
+  service:
+    uses: PipelineIQproject/pipeline_main/.github/workflows/reusable-node-service-ci.yml@dev
+    with:
+      service_name: github-integration-service
+      image_name: final_capstone-github-integration-service
+      dockerfile: services/github-integration-service/Dockerfile
+      node_project_dir: services/github-integration-service
+      chart_path: github-integration-service
+      container_port: "8082"
+      smoke_mode: http
+      sonar_organization: pipelineiqproject
+      sonar_project_key: pipelineiq-github-integration-service
+    secrets: inherit
