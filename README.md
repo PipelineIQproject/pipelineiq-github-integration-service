@@ -8,7 +8,7 @@ Independent repository for the PipelineIQ GitHub integration API.
 docker build -t <acr-login-server>/final_capstone-github-integration-service:local -f services/github-integration-service/Dockerfile .
 ```
 
-## Local Run
+## Local Run  
  
 This service expects PipelineIQ environment variables from Kubernetes ConfigMap and Key Vault secrets.
 
