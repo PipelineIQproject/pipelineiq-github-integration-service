@@ -6,7 +6,7 @@ Independent repository for the PipelineIQ GitHub integration API.
 
 ```bash 
 docker build -t <acr-login-server>/final_capstone-github-integration-service:local -f services/github-integration-service/Dockerfile .
-```
+``` 
 
 ## Local Run  
  
